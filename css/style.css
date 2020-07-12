@@ -1,0 +1,194 @@
+:root{
+    --main-color: #FF5722;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Start Settings Box */
+
+.settings-box {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: white;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: .3s;
+}
+
+.settings-box.open {
+    left: 0;
+}
+
+.settings-box .toggle-settings{
+    position: absolute;
+    right:-30px;
+    top: 100px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.settings-box .toggle-settings .fa-cog{
+    padding: 8px 0;
+    width: 30px;
+}
+
+.settings-box .option-box {
+    padding:10px;
+    text-align: center;
+    background-color: #eee;
+    margin: 10px;
+}
+.settings-box .option-box h4{
+    margin: 0;
+    color: #666;
+}
+
+.settings-box .option-box .colors-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.settings-box .option-box .colors-list li {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    border: 3px solid #EEE;
+}
+
+.settings-box .option-box .colors-list li.active {
+    border-color: #FFF;
+}
+
+.settings-box .option-box .colors-list li:first-child {
+    background-color: #FF5722;;
+}
+
+.settings-box .option-box .colors-list li:nth-child(2) {
+    background-color: #03a9f4;
+}
+
+.settings-box .option-box .colors-list li:nth-child(3) {
+    background-color: #ffc107;
+}
+
+.settings-box .option-box .colors-list li:nth-child(4) {
+    background-color: #9c27b0;
+}
+
+.settings-box .option-box .colors-list li:nth-child(5) {
+    background-color: #795548;
+}
+
+.settings-box .random-backgrounds .yes,
+.settings-box .random-backgrounds .no {
+    width: 80px;
+    background-color: #009688;
+    color: #FFF;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.settings-box .random-backgrounds span.active {
+    opacity: 1;
+}
+
+
+
+/* End Settings Box */
+
+/* Start Landing Page */
+
+.landing-page {
+    min-height: 100vh;
+    background-image: url('../imgs/1.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.landing-page .overlay {
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.header-area {
+    position: relative;
+    z-index: 2;
+    color: white;
+    display: flex;
+    padding: 10px;
+}
+
+.header-area .logo {
+    width: 300px;
+    padding: 15px; 
+    font-weight: bold;
+}
+.header-area .menu {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 15px;
+}
+.header-area .menu li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.header-area .menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-area .menu li a:hover,
+.header-area .menu li a.active {
+    color: var(--main-color);
+    transition: .3s;
+}
+
+.introduction-text {
+    color: white;
+    z-index: 2;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.introduction-text h1 span{
+    color: var(--main-color);
+}
+
+.introduction-text p{
+    line-height: 1.6;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* End Landing Page */
