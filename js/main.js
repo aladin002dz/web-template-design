@@ -67,6 +67,14 @@ randomBgElement.forEach(span => {
         // Add Active Class on Self
         e.target.classList.add("active");
 
+        if(e.target.dataset.background === "yes") {
+            backgroundOption = true;
+            randomizeImgs();
+        } else {
+            backgroundOption = false;
+            clearInterval(backgroundInterval);
+        }
+
     })
 })
 
@@ -78,19 +86,24 @@ let landingPage = document.querySelector(".landing-page");
 let imgArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
 
 // Random Background Option
-let baclGrondOption = true;
+let backgroundOption = true;
 
 // Variable to Control The Interval
-
+let backgroundInterval;
 
 // Function To Randomize Images
 function randomizeImgs() {
     // Change Background Image Url
-    let index = 0;
-    setInterval(()=>{
-        index = (index < 4)? index +1 : 0;
-        landingPage.style.backgroundImage = `url("./imgs/${imgArray[index]}")`;
-    }, 1000);
+    if( backgroundOption === true) {
+
+        let index = 0;
+        backgroundInterval = setInterval(()=>{
+            index = (index < 4)? index +1 : 0;
+            landingPage.style.backgroundImage = `url("./imgs/${imgArray[index]}")`;
+        }, 2000);
+
+    }
+
 }
 
 randomizeImgs();
