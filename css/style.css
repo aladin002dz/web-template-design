@@ -10,6 +10,13 @@ body {
     box-sizing: border-box;
 }
 
+.container{
+    width: 1680px;
+    padding-left: 15px;
+    padding-right: 15px;  
+    margin: auto;  
+}
+
 /* Start Settings Box */
 
 .settings-box {
@@ -192,3 +199,38 @@ body {
 }
 
 /* End Landing Page */
+
+
+/* Start Setting Box */
+.about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+.about-us .info-box{
+    flex: 1;
+    padding: 30px;
+}
+.about-us .info-box h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+.about-us .info-box p {
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+
+}
+.about-us .image-box {
+    flex: 1;
+    text-align: center;
+}
+
+.about-us .image-box img {
+    width: 75%;
+}
+
+
+/* End Setting Box */
