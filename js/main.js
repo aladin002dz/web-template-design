@@ -31,6 +31,7 @@ document.querySelector(".toggle-settings .fa-cog").onclick = function() {
 // Switch Colors
 const colorsLi = document.querySelectorAll(".colors-list li");
 colorsLi.forEach(li => {
+
     li.addEventListener("click", (e) => {
         // Set Color on Root
         document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
@@ -70,9 +71,11 @@ randomBgElement.forEach(span => {
         if(e.target.dataset.background === "yes") {
             backgroundOption = true;
             randomizeImgs();
+            localStorage.setItem("background_option", true);
         } else {
             backgroundOption = false;
             clearInterval(backgroundInterval);
+            localStorage.setItem("background_option", false);
         }
 
     })
@@ -90,6 +93,36 @@ let backgroundOption = true;
 
 // Variable to Control The Interval
 let backgroundInterval;
+
+// Check If There's Storage Random Bakcgroungd Item
+let backgroundLocalItem = localStorage.getItem("background_option");
+
+// Check if Random Background Local Storage in Not Empty
+if(backgroundLocalItem !== null) {
+
+    if (backgroundLocalItem === 'true') {
+
+        backgroundOption = true;
+
+    } else {
+
+        backgroundOption = false;
+        document.querySelectorAll(".random-backgrounds span").forEach(element => {
+            element.classList.remove("active");
+        });
+
+        if (backgroundLocalItem === 'true') {
+            document.querySelector(".random-backgrounds .yes").classList.add("active");
+        } else {
+            document.querySelector(".random-backgrounds .no").classList.add("active");
+        }
+
+    }
+
+    // Remove Active Class from All Spans
+
+
+}
 
 // Function To Randomize Images
 function randomizeImgs() {
