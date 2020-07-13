@@ -106,6 +106,7 @@ if(backgroundLocalItem !== null) {
 
     } else {
 
+        // Remove Active Class from All Spans
         backgroundOption = false;
         document.querySelectorAll(".random-backgrounds span").forEach(element => {
             element.classList.remove("active");
