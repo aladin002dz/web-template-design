@@ -142,3 +142,41 @@ function randomizeImgs() {
 
 randomizeImgs();
 
+
+// Select Skills Selector
+let ourSkills = document.querySelector(".skills");
+
+window.onscroll = function () {
+
+    // Skills offset top
+    let skillsOffsetTop = ourSkills.offsetTop;
+    console.log(`skillsOffsetTop=${skillsOffsetTop}`)
+
+    // Skills Outer Height
+    let skillsOuterHeight = ourSkills.offsetHeight;
+    console.log(`skillsOuterHeight=${skillsOuterHeight}`)
+
+    // Window Height
+    let windowHeight = this.innerHeight;
+    console.log(`windowHeight=${windowHeight}`)
+
+    // Window ScrollTop
+    let windowScrollTop = this.pageYOffset;
+    console.log(`windowScrollTop=${windowScrollTop}`)
+
+    console.log(`skillsOffsetTop + skillsOuterHeight - windowHeight=${skillsOffsetTop + skillsOuterHeight - windowHeight}`)
+    if(windowScrollTop > (skillsOffsetTop - skillsOuterHeight + windowHeight)) {
+
+        console.log("section skills reached");
+        let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
+
+        allSkills.forEach(skill => {
+
+            skill.style.width = skill.dataset.progress;
+
+        });
+
+    }
+
+}
+
