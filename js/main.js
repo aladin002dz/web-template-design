@@ -162,7 +162,6 @@ window.onscroll = function () {
 
     if(windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight)) {
 
-        console.log("section skills reached");
         let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
 
         allSkills.forEach(skill => {
