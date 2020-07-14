@@ -180,3 +180,40 @@ window.onscroll = function () {
 
 }
 
+// Create Popup with The Image
+let ourGallery = document.querySelectorAll(".gallery img");
+
+ourGallery.forEach(img =>{
+
+    img.addEventListener("click", (e) => {
+        
+        // Create Overlay Element
+        let overlay = document.createElement("div");
+
+        // Add Class to Overlay
+        overlay.className = "popup-overlay";
+
+        // Append Overlay to the Body
+        document.body.appendChild(overlay);
+
+        // Create the Popup
+        let popupBox = document.createElement("div");
+
+        // Add Class to the Popup Box
+        popupBox.className = "popup-box";
+
+        // Create the Image
+        let popupImage = document.createElement("img");
+
+        // Set Image Source
+        popupImage.src = img.src;
+
+        // Add Image to Popup Box
+        popupBox.appendChild(popupImage);
+
+        // Append the Popup Box to Body
+        document.body.appendChild(popupBox);
+
+    })
+
+});
