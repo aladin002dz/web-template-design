@@ -102,6 +102,7 @@ body {
     background-color: #795548;
 }
 
+/*
 .settings-box .random-backgrounds .yes,
 .settings-box .random-backgrounds .no {
     width: 80px;
@@ -116,8 +117,30 @@ body {
     opacity: .5;
     cursor: pointer;
 }
+*/
 
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
+    width: 80px;
+    background-color: var(--main-color);
+    color: #FFF;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+/*
 .settings-box .random-backgrounds span.active {
+    opacity: 1;
+}
+*/
+
+.settings-box .option-box span.active {
     opacity: 1;
 }
 
