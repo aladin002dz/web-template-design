@@ -28,6 +28,7 @@ body {
     z-index: 1000;
     min-height: 100vh;
     transition: .3s;
+    border: 1px solid #EEE;
 }
 
 .settings-box.open {
@@ -41,6 +42,8 @@ body {
     background-color: white;
     text-align: center;
     cursor: pointer;
+    border: 1px solid #EEE;
+    border-left-style: none;
 }
 
 .settings-box .toggle-settings .fa-cog{
