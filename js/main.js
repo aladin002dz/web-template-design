@@ -39,13 +39,7 @@ colorsLi.forEach(li => {
         // Set Color En Local Storage
         localStorage.setItem("color_option", e.target.dataset.color);
 
-        // Remove Active Class from All Children
-        e.target.parentElement.querySelectorAll(".active").forEach(element => {
-            element.classList.remove("active");
-        });
-
-        // Add Active Class on Self
-        e.target.classList.add("active");
+        handleActive(e);
 
     })
 })
@@ -60,13 +54,7 @@ randomBgElement.forEach(span => {
     // Click on All Spans
     span.addEventListener("click", (e) => {
 
-        // Remove Active Class from All Children
-        e.target.parentElement.querySelectorAll(".active").forEach(element => {
-            element.classList.remove("active");
-        });
-
-        // Add Active Class on Self
-        e.target.classList.add("active");
+        handleActive(e);
 
         if(e.target.dataset.background === "yes") {
             backgroundOption = true;
@@ -278,3 +266,18 @@ function scrollingItems(elements) {
 
 scrollingItems(allBullets);
 scrollingItems(allNavLinks);
+
+
+// Handle Active State
+function handleActive(e) {
+
+    // Remove Active Class from All Sibling
+    e.target.parentElement.querySelectorAll(".active").forEach(element => {
+        element.classList.remove("active");
+    });
+
+    // Add Active Class on Self
+    e.target.classList.add("active");
+
+
+}
