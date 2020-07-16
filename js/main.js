@@ -255,3 +255,16 @@ document.addEventListener("click", (e) => {
 
     }
 });
+
+// Select All Nav Bullets
+const allBullets = document.querySelectorAll(".nav-bullets .bullet");
+
+allBullets.forEach(bullet => {
+    bullet.addEventListener("click", (e)=> {
+
+        document.querySelector(e.target.dataset.section).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    });
+});
