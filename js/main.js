@@ -326,3 +326,9 @@ bulletsSpan.forEach(span => {
         handleActive(e);
     });
 });
+
+// Reset Button
+document.querySelector(".reset-options").onclick = function(){
+    localStorage.clear();
+    window.location.reload();
+}
