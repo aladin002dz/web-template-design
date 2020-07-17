@@ -258,6 +258,7 @@ body {
     width: 40px;
     cursor: pointer;
     background: none;
+    position: relative;
 }
 
 .header-area .toggle-menu.menu-active:before {
@@ -303,32 +304,32 @@ body {
 
 @media (max-width: 991px) {
     .header-area .menu {
-      display: none;
+        display: none;
     }
     .header-area .menu.open {
-      background-color: #FFF;
-      padding: 10px;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 50px;
-      width: 100%;
-      border-radius: 4px;
-      text-align: left;
+        background-color: #FFF;
+        padding: 10px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        border-radius: 4px;
+        text-align: left;
     }
     .header-area .menu.open li {
-      display: block;
-      margin: 10px;
+        display: block;
+        margin: 10px;
     }
     .header-area .menu.open li a {
-      color: var(--main-color);
-      font-weight: bold;
+        color: var(--main-color);
+        font-weight: bold;
     }
     .header-area .toggle-menu {
-      display: inline-block;
+        display: inline-block;
     }
-  }
-  
+}
+
 /* End Landing Page */
 
 
