@@ -102,23 +102,6 @@ body {
     background-color: #795548;
 }
 
-/*
-.settings-box .random-backgrounds .yes,
-.settings-box .random-backgrounds .no {
-    width: 80px;
-    background-color: var(--main-color);
-    color: #FFF;
-    margin-top: 10px;
-    display: inline-block;
-    font-size: 12px;
-    padding: 4px 10px;
-    font-weight: bold;
-    border-radius: 4px;
-    opacity: .5;
-    cursor: pointer;
-}
-*/
-
 .settings-box .option-box .yes,
 .settings-box .option-box .no {
     width: 80px;
@@ -241,10 +224,14 @@ body {
     padding: 15px; 
     font-weight: bold;
 }
-.header-area .menu {
-    list-style: none;
+
+.header-area .menu-container {
     width: 100%;
     text-align: right;
+}
+
+.header-area .menu {
+    list-style: none;
     padding-left: 0;
     padding-right: 15px;
 }
@@ -265,6 +252,26 @@ body {
     transition: .3s;
 }
 
+.header-area .toggle-menu {
+    margin-top: 16px;
+    display: none;
+    background: none;
+    border: none;
+    width: 40px;
+    cursor: pointer;
+}
+
+.header-area .toggle-menu:focus {
+    outline: none;
+}
+
+.header-area .toggle-menu span {
+    display: block;
+    background-color: #FFF;
+    height: 3px;
+    margin-bottom: 4px;
+}
+
 .introduction-text {
     color: white;
     z-index: 2;
@@ -283,6 +290,16 @@ body {
     line-height: 1.6;
     font-size: 20px;
     margin: 0;
+}
+
+@media (max-width: 991px) {
+    .header-area .menu {
+        display: none;
+    }
+
+    .header-area .toggle-menu {
+        display: inline-block;
+    }
 }
 
 /* End Landing Page */
