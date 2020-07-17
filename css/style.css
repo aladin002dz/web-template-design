@@ -813,3 +813,30 @@ body {
 }
 
 /* End Contact Us */
+
+/* Start Grid System */
+
+@media (min-width: 576px) { /* Small Devices => Landscape Phones */
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) { /* Medium Devices => Tablets */
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) { /* Desktop */
+    .container {
+        max-width: 968px;
+    }
+}
+
+@media (min-width: 1200px) { /* Desktop */
+    .container {
+        max-width: 1160px;
+    }
+}
+/* End Grid System */
