@@ -939,8 +939,42 @@ padding: 30px;
     opacity: 0;
     transition: .3s;
 }
-
 /* End Contact Us */
+
+/* Start Footer */
+.footer {
+    background-color: #333;
+    color: #EEE;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer div {
+    margin: 7px;
+}
+
+.footer a, 
+.footer i {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer a:hover,
+.footer a.active,
+.footer i {
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    .footer div {
+        width: 100%;
+    }
+}
+/* End Footer */
 
 /* Start Grid System */
 
